@@ -1,5 +1,5 @@
 {
-  "name": "chain-sanctions",
+  "name": "graceland pnp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +18,6 @@
     "sass": "^1.52.3"
   },
   "engines": {
-    "node": "14.17.6"
+    "node": "16.15.1"
   }
 }
