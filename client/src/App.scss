@@ -1,0 +1,21 @@
+@use "styles/vars";
+
+.App {
+  &-header {
+    border-bottom: 1px solid vars.$color-gray;
+    margin-bottom: vars.$space-std;
+  }
+}
+
+.parsedImage {
+  width: 100px;
+  height: auto;
+}
+
+.parsedKey {
+  font-weight: bold;
+}
+
+li {
+  margin-top: 20px;
+}
