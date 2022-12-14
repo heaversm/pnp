@@ -1,10 +1,20 @@
 @use "styles/vars";
 
+body {
+  margin: 2em 4em;
+}
+
+
 .App {
-  &-header {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  &-header, &-form {
     border-bottom: 1px solid vars.$color-gray;
     margin-bottom: vars.$space-std;
   }
+  &-form {
+    padding-bottom: vars.$space-std;
+  }
+
 }
 
 .parsedImage {
@@ -18,4 +28,23 @@
 
 li {
   margin-top: 20px;
+}
+
+.input {
+  margin-top: 20px;
+}
+
+.results-container {
+  display: flex;
+}
+
+.results-sidebar {
+  width: 30%;
+  margin-right: 5%;
+
+  a {
+    color: crimson;
+    cursor: pointer;
+  }
+  
 }

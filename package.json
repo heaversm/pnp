@@ -1,5 +1,5 @@
 {
-  "name": "graceland pnp",
+  "name": "pocket outliner",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,8 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "html-dom-parser": "^3.1.2",
+    "html-to-text": "^9.0.2",
+    "jsdom": "^20.0.3",
+    "nlpcloud": "^1.0.40",
     "sass": "^1.52.3"
   },
   "engines": {
