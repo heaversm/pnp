@@ -52,7 +52,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    fetch(`https://7e2c-50-230-40-63.ngrok.io/parseURL?url=${inputVal}`)
+    fetch(`https://f3cf-67-161-104-2.ngrok.io/parseURL?url=${inputVal}`, {
+      "ngrok-skip-browser-warning": true,
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "01");
