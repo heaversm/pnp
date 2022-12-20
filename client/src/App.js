@@ -39,7 +39,7 @@ function App() {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => {
-        console.log(process.env.REACT_APP_PARSE_URL);
+        //console.log(process.env.REACT_APP_PARSE_URL);
         setData(data.message);
       })
       .catch((err) => console.log(err));
