@@ -100,8 +100,9 @@ app.get("/api", (req, res) => {
 
 app.get("/parseURL", (req, res) => {
   const data = req.query.url;
+  console.log("data", data);
   const requestURL = `${process.env.API_URL}?consumer_key=${process.env.KEY}&url=${data}`;
-
+  console.log("requestURL", requestURL);
   axios
     .get(requestURL, {
       headers: {
