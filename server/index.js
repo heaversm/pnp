@@ -101,13 +101,18 @@ app.get("/api", (req, res) => {
 app.get("/parseURL", (req, res) => {
   const data = req.query.url;
   console.log("data", data);
-  const requestURL = `${process.env.API_URL}?consumer_key=${process.env.KEY}&url=${data}`;
+  // const requestURL = `${process.env.API_URL}?consumer_key=${process.env.KEY}&url=${data}`;
+  const requestURL = process.env.API_URL;
   console.log("requestURL", requestURL);
   axios
     .get(requestURL, {
       headers: {
         Accept: "application/json",
       },
+      params: {
+        consumer_key: process.env.KEY,
+        url: data,
+      }
     })
     .then(async (response) => {
       //destructure response into items you want to use
