@@ -53,10 +53,22 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    fetch(`https://f3cf-67-161-104-2.ngrok.io/parseURL?url=${inputVal}`, {
-      "ngrok-skip-browser-warning": true,
-      mode: "no-cors",
-    })
+    const params = {
+      url: inputVal,
+    };
+
+    console.log(process.env.REACT_APP_PARSE_URL);
+
+    fetch(
+      `/parseURL?${new URLSearchParams({
+        url: inputVal,
+      })}`,
+      {
+        // headers: {
+        //   mode: "no-cors",
+        // },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "01");

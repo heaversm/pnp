@@ -66,6 +66,7 @@ const summarizeParagraphs = async function (parsedParagraphs) {
   }
 
   const summarizeAllPromise = new Promise((resolve, reject) => {
+    numGroupsSummarized = 0;
     paragraphGroupings.forEach(async (paragraphGrouping) => {
       const summary = await summarize(paragraphGrouping);
       numGroupsSummarized++;
