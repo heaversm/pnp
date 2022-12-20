@@ -179,7 +179,12 @@ app.get("/parseURL", (req, res) => {
     })
     .catch((err) => {
       console.log("error");
-      console.error(err.response.data);
+      console.error(err);
+      const errDetails = {
+        errorResponse: err,
+        data: data,
+        requestURL: requestURL,
+      };
       res.json({
         error: `there was an error with your request`,
         details: err,
