@@ -38,7 +38,10 @@ function App() {
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
-      .then((data) => setData(data.message))
+      .then((data) => {
+        console.log(process.env.REACT_APP_PARSE_URL);
+        setData(data.message);
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -56,8 +59,6 @@ function App() {
     const params = {
       url: inputVal,
     };
-
-    console.log(process.env.REACT_APP_PARSE_URL);
 
     fetch(
       `/parseURL?${new URLSearchParams({
