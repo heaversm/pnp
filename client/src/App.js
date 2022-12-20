@@ -38,7 +38,8 @@ function App() {
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data.message))
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
     setIsLoading(true);
     fetch(`https://f3cf-67-161-104-2.ngrok.io/parseURL?url=${inputVal}`, {
       "ngrok-skip-browser-warning": true,
+      mode: "no-cors",
     })
       .then((res) => res.json())
       .then((data) => {
@@ -67,7 +69,8 @@ function App() {
           setData("Displaying Results");
           setResults(data);
         }
-      });
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
