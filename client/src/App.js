@@ -55,6 +55,7 @@ function App() {
     fetch(`/parseURL?url=${inputVal}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data, "01");
         setIsLoading(false);
         if (data.error) {
           setData(data.error);
