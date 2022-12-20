@@ -178,7 +178,8 @@ app.get("/parseURL", (req, res) => {
       res.json(apiResponseObj);
     })
     .catch((err) => {
-      console.error(err);
+      console.log("error");
+      console.error(err.response.data);
       res.json({
         error: `there was an error with your request`,
         details: err,
